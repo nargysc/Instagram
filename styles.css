@@ -1,0 +1,378 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background: #fefdfd;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+}
+
+/*Navbar*/
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    top:0;
+    left: 0;
+    background:white;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.logo-picture {
+    height: 100%;
+    margin-top: 0.188rem;
+}
+
+.navContainer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    height: 100%;
+    width: 80%;
+    align-items: center;
+}
+
+.search {
+    width: 200px;
+    height: 32px;
+    background: rgb(236, 235, 235);
+    border: none;
+    border-radius: 4px;
+    color: black;
+    text-transform: capitalize;
+   
+  
+}
+
+.search::placeholder {
+    font-size: 14px;
+    font-family: 300;
+}
+
+.navItems {
+    height: 25px;
+    position: relative;
+}
+
+.icons {
+    display: inline-block;
+    height: 100%;
+    margin: 0 10px;
+}
+.icons:hover {
+    cursor: pointer;
+}
+.profile-picture {
+    width: 25px;
+    background-image: url(utilities/profilepic.png);
+    background-size:cover;
+}
+
+/*Status Board*/
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    padding: 45px 0;
+    width: 100%;
+}
+
+.mainBoard {
+    display: grid;
+    grid-template-columns: 60% 10%;
+    max-width: 1000px;
+    width: 70%;
+}
+
+.leftSide {
+    display: flex;
+    flex-direction: column;
+}
+
+.statusIcons {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 120px;
+    /*background-color: none;*/
+    padding: 10px;
+    padding-right:0 ;
+    /*border:1px solid rgb(222, 219, 219);*/
+    border-radius: 5px;
+    overflow: hidden;
+    overflow-x: auto;
+}
+.statusIcons::-webkit-scrollbar {
+    display: none;
+}
+.statusCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+    flex: 0 0 auto;
+    width: 80px;
+    max-width: 80px;
+}
+
+
+.statusPicture img {
+    width: 70px;
+    height: 70px;
+}
+
+/* Feed Board */
+
+.feedPost {
+    width: 100%;
+    height: auto;
+    background:#EFEFEF;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 110px;
+    width: 100%;
+    padding: 0 20px;
+}
+.detail .picopt {
+    height: 10px;
+    margin-top: -3rem;
+}
+
+
+.detail .username {
+    width: auto;
+    color: black;
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: 34px;
+    margin-bottom: -35px;
+    align-items: center;
+}
+.detail .user_detail
+ {
+    display: flex;
+    align-items: center;
+    margin-top: -3rem;
+ }
+
+ .detail .statusPicture {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+ }
+ .postpic {
+    width: 100%;
+    height: 500px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-top: -1rem;
+ }
+
+.content {
+    width: 100%;
+    padding: 20px;
+}
+.likes  {
+    font-weight: bold;
+}
+.descs {
+    line-height: 20px;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.descs span {
+    font-weight: 900;
+    margin-right: 10px;
+}
+.times {
+    color: #b4afaf;
+}
+
+
+.commentBoard {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+}
+.commentBoard .commentPic {
+    height: 40px;
+    margin-left: 15px;
+}
+
+.comment {
+    font-size: 15px;
+    border:none;
+    outline: none;
+    width: 80%;
+    background: none;
+    height: 40px;
+}
+.comment::placeholder {
+    background-color: none;
+}
+.btn-comment {
+    height: 100%;
+    color: black;
+    width: 70px;
+    background:none;
+    border: none;
+    font-weight: bold;
+    outline: none;
+}
+
+.btn-comment:hover{
+    color: rgb(44, 44, 243);
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.reactions {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    margin-top: -20px;
+    align-items: center;
+}
+
+.reactions .commentPic {
+    margin: 0;
+    margin-right: 15px;
+    height: 25px;
+}
+
+.reactions .commentPic.right {
+    margin-left: auto;
+}
+
+.reactions .commentPic.right:hover {
+    cursor: pointer;
+}
+
+
+.rightSide {
+    padding: 20px;
+}
+
+.recommends {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+ .recommends .commentPic {
+    padding: 0 0 auto;
+    width: 50px;
+    padding: 0;
+    height: 50px;
+    margin-right: 10px;
+}
+
+  .username  {
+    font-size: 14px;
+    font-weight: bold;
+ }
+
+
+ .suggestion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    font-size: 17px;  
+    white-space: nowrap;
+    padding: 0 60px;
+ }
+ .sgrid{
+    display: grid;
+    grid-template-rows: repeat(2, 2fr);
+    grid-template-columns: repeat(2, 2fr);
+    grid-gap: 10px;
+ }
+ .suggests {
+    padding: 1px;
+ }
+.suggestsions-people {
+    padding: 3px;
+}
+ .speople {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+ }
+ .sname {
+    clear: both;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;  
+ }
+
+ .sbtn {
+    font-size: 14px;
+    border: 1px solid #0095F6;
+    background-color: #0095F6;
+    width: 64px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    line-height: 15px;
+    color: white;
+    height: 19px;
+    border-radius: 5px;
+ }
+ .sbtn:hover {
+       color: #0095F6;
+       background-color: white;
+ }
+
+
+ .feedWrap {
+    width: 100%;
+ }
+
+ /*Media queries*/
+
+@media (max-width:1100px) {
+    .search ,.navItems, .rightSide {
+        display:none;
+    }
+    .navContainer {
+        width: 90%;
+    }
+    .logo-picture {
+        margin-left: 12rem; 
+    }
+    .mainBoard, .leftSide {
+        width: 100%;
+           }
+    .feedPost, .detail {
+        width: 120%;
+        margin-left: 3rem;
+    }
+
+    .picopt {
+        margin-right:8rem;
+    }
+    .statusIcons {
+        margin-left: 5rem;
+    }
+    }
